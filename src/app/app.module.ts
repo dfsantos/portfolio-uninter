@@ -5,11 +5,17 @@ import { AppComponent } from './app.component';
 import { SobreComponent } from './sobre/sobre.component';
 
 import { RouterModule } from '@angular/router';
+import { FormacaoComponent } from './formacao/formacao.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SobreComponent
+    SobreComponent,
+    FormacaoComponent,
+    PortfolioComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,

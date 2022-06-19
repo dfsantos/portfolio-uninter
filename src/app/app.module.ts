@@ -20,7 +20,10 @@ import { ContatoComponent } from './contato/contato.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: 'sobre', component: SobreComponent }
+      { path: 'sobre', component: SobreComponent },
+      { path: 'formacao', component: FormacaoComponent },
+      { path: 'portfolio', component: PortfolioComponent },
+      { path: 'contato', component: ContatoComponent },
     ])
   ],
   providers: [],

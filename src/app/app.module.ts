@@ -9,6 +9,7 @@ import { FormacaoComponent } from './formacao/formacao.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CapaComponent } from './capa/capa.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CapaComponent } from './capa/capa.component';
         path: '**',
         redirectTo: '/capa',
       },
-    ])
+    ]),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,19 +5,25 @@
     <p>Entre em contato comigo. Vamos trocar uma ideia sobre novos projetos.</p>
     <p>Responderei em breve!</p>
     <!-- Formulário de contato -->
-    <form>
+    <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+            <input type="text" class="form-control" id="nome" placeholder="Seu nome" formControlName="nome">
         </div>
         <div class="mb-3">
             <label for="email-resposta" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email-resposta" placeholder="seu.email@email.com.br">
+            <input type="email" class="form-control" id="email-resposta" placeholder="seu.email@email.com.br"
+                formControlName="email">
         </div>
         <div class="mb-3">
             <label for="mensagem" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="mensagem" placeholder="Deixe sua mensagem" rows="5"></textarea>
+            <textarea class="form-control" id="mensagem" placeholder="Deixe sua mensagem" rows="5"
+                formControlName="mensagem"></textarea>
         </div>
-        <button type="button" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <ngb-toast *ngIf="showToast" (hide)="showToast = false" [delay]="3000" [autohide]="true">
+            Sua mensagem foi enviada!
+        </ngb-toast>
     </form>
+    
 </div>

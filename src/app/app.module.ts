@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { FormacaoComponent } from './formacao/formacao.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContatoComponent } from './contato/contato.component';
+import { CapaComponent } from './capa/capa.component';
 
 @NgModule({
   declarations: [
@@ -15,15 +16,22 @@ import { ContatoComponent } from './contato/contato.component';
     SobreComponent,
     FormacaoComponent,
     PortfolioComponent,
-    ContatoComponent
+    ContatoComponent,
+    CapaComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
+      { path: 'capa', component: CapaComponent },
       { path: 'sobre', component: SobreComponent },
       { path: 'formacao', component: FormacaoComponent },
       { path: 'portfolio', component: PortfolioComponent },
       { path: 'contato', component: ContatoComponent },
+      {
+        path: '',
+        redirectTo: '/capa',
+        pathMatch: 'full'
+      }
     ])
   ],
   providers: [],

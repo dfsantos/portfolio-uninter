@@ -31,7 +31,11 @@ import { CapaComponent } from './capa/capa.component';
         path: '',
         redirectTo: '/capa',
         pathMatch: 'full'
-      }
+      },
+      {
+        path: '**',
+        redirectTo: '/capa',
+      },
     ])
   ],
   providers: [],
